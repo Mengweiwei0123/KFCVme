@@ -28,7 +28,7 @@ export default function VaultList() {
       </div>
       <div className="mx-4">
         <button className="btn btn-block" onClick={() => setIsOpen(true)}>
-          Add Record
+          添加记录
         </button>
       </div>
       <div className="menu h-full flex flex-col gap-3 relative m-4 rounded-box min-h-[calc(80vh_-_100px)]">

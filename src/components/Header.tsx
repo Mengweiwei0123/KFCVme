@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useDisconnect } from 'wagmi';
 import { StorageKeys } from '../constants/keys';
+import logo from './../logos.png'
 
 export default function Header({
   isConnected,
@@ -23,7 +24,7 @@ export default function Header({
       {isConnected && (
         <div className="flex w-full py-2 px-4 items-center">
           <div className="flex items-center grow">
-            <img alt="" src="img/logo.svg" width={64} height={64} />
+            <img alt="" src={logo} width={64} height={64} />
             <div className="text-white text-left">
               <p className="text-bold">{email}</p>
               <p className="text-xs text-slate-200">
@@ -42,10 +43,10 @@ export default function Header({
               className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52"
             >
               <li>
-                <div onClick={() => disconnectAsync()}>Disconnect</div>
+                <div onClick={() => disconnectAsync()}>断开连接</div>
               </li>
               <li>
-                <div onClick={() => setLocked(true)}> Lock</div>
+                <div onClick={() => setLocked(true)}>锁定账户</div>
               </li>
             </ul>
           </div>

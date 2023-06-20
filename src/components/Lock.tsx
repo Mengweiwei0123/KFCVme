@@ -60,7 +60,7 @@ export default function Lock({ setUnlock }: { setUnlock: () => void }) {
         ></input>
 
         <button className="btn" onClick={validate}>
-          Unlock
+          解锁
         </button>
       </div>
     </div>

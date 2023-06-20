@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import logo from '../logo.svg';
+import logo from '../logos.png';
 import RecoverDialog from './dialog/RecoverDialog';
 import SetupDialog from './dialog/SetupDialog';
 
@@ -13,13 +13,13 @@ export default function Setup() {
       <RecoverDialog isOpen={isRecoverOpen} setIsOpen={setIsRecoverOpen} />
       <img src={logo} className="App-logo" alt="logo" />
 
-      <p className="text-xl font-medium text-white">Welcome to DeVault</p>
+      <p className="mb15 text-xl font-medium text-white">欢迎来到密码保险箱</p>
       <div className="flex gap-2 mt-2">
         <button className="btn btn-md" onClick={() => setIsSetupOpen(true)}>
-          Setup New Vault
+          创建新钱包账户
         </button>
         <button className="btn" onClick={() => setIsRecoverOpen(true)}>
-          Recover Your Vault
+          登录原有账号
         </button>
       </div>
     </div>
