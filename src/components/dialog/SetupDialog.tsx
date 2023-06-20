@@ -165,15 +165,15 @@ export default function SetupDialog({
             >
               <Dialog.Panel className="w-full max-w-[80%] transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
                 <Dialog.Title as="h3" className="text-lg font-medium leading-6 text-gray-900">
-                  Setup New Vault
+                  创建新钱包账户
                 </Dialog.Title>
 
                 {isCreateSuccess ? (
                   <div className="flex flex-col items-center justify-center">
                     <div className="text-3xl mt-5">
-                      Congratulations! Your vault has been created successfully.
+                    恭喜! 你的账户已经成功创建！
                     </div>
-                    <div className="text-xl mt-10">Your secret key is {showSecretKey}</div>
+                    <div className="text-xl mt-10">你的密钥为 {showSecretKey}</div>
                     <button
                       type="button"
                       className="btn w-full mt-16"
@@ -181,7 +181,7 @@ export default function SetupDialog({
                         setIsOpen(false);
                       }}
                     >
-                      OK
+                      好的
                     </button>
                   </div>
                 ) : (
@@ -189,31 +189,31 @@ export default function SetupDialog({
                     <div className="mt-2">
                       <div className="form-control w-full">
                         <label className="label">
-                          <span className="label-text">Your email</span>
+                          <span className="label-text">你的邮箱</span>
                         </label>
                         <input
                           type="email"
                           value={email}
                           onChange={(e) => setEmail(e.target.value)}
-                          placeholder="example@devault.io"
+                          placeholder="邮箱"
                           className="input w-full input-sm"
                         />
                         <label className="label mt-2">
-                          <span className="label-text">Master Password</span>
+                          <span className="label-text">主密码</span>
                         </label>
                         <input
                           type="password"
-                          placeholder="Password"
+                          placeholder="主密码"
                           value={masterPassword}
                           onChange={(e) => setMasterPassword(e.target.value)}
                           className="input w-full input-sm"
                         />
                         <label className="label mt-2">
-                          <span className="label-text">Re-enter Password</span>
+                          <span className="label-text">再次输入密码</span>
                         </label>
                         <input
                           type="password"
-                          placeholder="Password"
+                          placeholder="密码"
                           value={reenter}
                           onChange={(e) => setReenter(e.target.value)}
                           className="input w-full input-sm"
@@ -224,11 +224,11 @@ export default function SetupDialog({
                     <div className="mt-4">
                       {loading ? (
                         <button type="button" className="btn w-full btn-disabled">
-                          loading
+                          加载中
                         </button>
                       ) : (
                         <button type="button" className="btn w-full " onClick={onSubmit}>
-                          Submit
+                          提交
                         </button>
                       )}
                     </div>

@@ -54,7 +54,7 @@ export default function Lock({ setUnlock }: { setUnlock: () => void }) {
         <input
           type="password"
           value={pass}
-          placeholder="master password"
+          placeholder="主密码"
           className="input text-gray-900"
           onChange={(e) => setPass(e.target.value)}
         ></input>

@@ -114,12 +114,12 @@ export default function RecoverDialog({
             >
               <Dialog.Panel className="w-full max-w-[80%] transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
                 <Dialog.Title as="h3" className="text-lg font-medium leading-6 text-gray-900">
-                  Recover Your Vault
+                  登录账号
                 </Dialog.Title>
                 {isRecoverSuccess ? (
                   <div className="flex flex-col items-center justify-center">
                     <div className="text-3xl mt-5">
-                      Congratulations! Your vault has been recovered successfully.
+                      恭喜! 你的账户已经成功登录！
                     </div>
                     <button
                       type="button"
@@ -128,7 +128,7 @@ export default function RecoverDialog({
                         setIsOpen(false);
                       }}
                     >
-                      OK
+                      好的
                     </button>
                   </div>
                 ) : (
@@ -136,32 +136,32 @@ export default function RecoverDialog({
                     <div className="mt-2">
                       <div className="form-control w-full max-w-xs">
                         <label className="label">
-                          <span className="label-text">Your email</span>
+                          <span className="label-text">你的邮箱</span>
                         </label>
                         <input
                           type="email"
                           value={email}
                           onChange={(e) => setEmail(e.target.value)}
-                          placeholder="example@devault.io"
+                          placeholder="邮箱"
                           className="input w-full max-w-xs input-sm"
                         />
                         <label className="label mt-2">
-                          <span className="label-text">Master Password</span>
+                          <span className="label-text">主密码</span>
                         </label>
                         <input
                           type="password"
-                          placeholder="Password"
+                          placeholder="主密码"
                           value={masterPassword}
                           onChange={(e) => setMasterPassword(e.target.value)}
                           className="input w-full max-w-xs input-sm"
                         />
                         <label className="label mt-2">
-                          <span className="label-text">Secret Key</span>
+                          <span className="label-text">密钥</span>
                         </label>
 
                         <input
                           type="password"
-                          placeholder="Password"
+                          placeholder="密钥"
                           value={secretKey}
                           onChange={(e) => setSecretKey(e.target.value)}
                           className="input w-full max-w-xs input-sm"
@@ -175,7 +175,7 @@ export default function RecoverDialog({
                           type="button"
                           className="inline-flex justify-center rounded-md border border-transparent bg-blue-100 px-4 py-2 text-sm font-medium text-blue-900 hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 btn-disabled"
                         >
-                          loading
+                          正在加载
                         </button>
                       ) : (
                         <button
@@ -183,7 +183,7 @@ export default function RecoverDialog({
                           className="inline-flex justify-center rounded-md border border-transparent bg-blue-100 px-4 py-2 text-sm font-medium text-blue-900 hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
                           onClick={() => onsubmit()}
                         >
-                          Submit
+                          提交
                         </button>
                       )}
                     </div>

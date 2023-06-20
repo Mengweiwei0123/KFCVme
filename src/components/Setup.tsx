@@ -13,12 +13,12 @@ export default function Setup() {
       <RecoverDialog isOpen={isRecoverOpen} setIsOpen={setIsRecoverOpen} />
       <img src={logo} className="App-logo" alt="logo" />
 
-      <p className="mb15 text-xl font-medium text-white">欢迎来到密码保险箱</p>
-      <div className="flex gap-2 mt-2">
-        <button className="btn btn-md" onClick={() => setIsSetupOpen(true)}>
+      <p className="mb15 text-xl font-medium text-white mb-10">欢迎来到密码保险箱</p>
+      <div className="flex gap-2 mt-2 ">
+        <button className="btn btn-md text-white" onClick={() => setIsSetupOpen(true)}>
           创建新钱包账户
         </button>
-        <button className="btn" onClick={() => setIsRecoverOpen(true)}>
+        <button className="btn text-white" onClick={() => setIsRecoverOpen(true)}>
           登录原有账号
         </button>
       </div>

@@ -8,9 +8,9 @@ body {
 .App {
   text-align: center;
   overflow-y: auto;
-  width: 600px;
+  width: 500px;
   background: rgb(112, 149, 235);
-  min-height: 800px;
+  min-height: 700px;
   margin: 0 auto;
   @apply rounded-xl;
 }

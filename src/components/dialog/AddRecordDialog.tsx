@@ -105,37 +105,37 @@ export default function AddRecordDialog({
             >
               <Dialog.Panel className="w-full transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all max-w-md">
                 <Dialog.Title as="h3" className="text-lg font-medium leading-6 text-gray-900">
-                  Add Record
+                  添加记录
                 </Dialog.Title>
 
                 <div className="mt-2">
                   <div className="form-control w-full">
                     <label className="label">
-                      <span className="label-text">Domain</span>
+                      <span className="label-text">域名</span>
                     </label>
                     <input
                       type="text"
                       value={domain}
                       onChange={(e) => setDomain(e.target.value)}
-                      placeholder="example.com"
+                      placeholder="域名"
                       className="input w-full input-sm"
                     />
                     <label className="label mt-2">
-                      <span className="label-text">Username</span>
+                      <span className="label-text">用户名</span>
                     </label>
                     <input
                       type="text"
                       value={username}
                       onChange={(e) => setUsername(e.target.value)}
-                      placeholder="example@devault.io"
+                      placeholder="用户名"
                       className="input w-full input-sm"
                     />
                     <label className="label mt-2">
-                      <span className="label-text"> Password</span>
+                      <span className="label-text"> 密码</span>
                     </label>
                     <input
                       type="password"
-                      placeholder="Password"
+                      placeholder="密码"
                       value={password}
                       onChange={(e) => setPassword(e.target.value)}
                       className="input w-full input-sm"
@@ -146,11 +146,11 @@ export default function AddRecordDialog({
                 <div className="mt-4">
                   {loading ? (
                     <button type="button" className="btn w-full btn-disabled">
-                      Tx Processing
+                      交易处理中
                     </button>
                   ) : (
                     <button type="button" className="btn w-full " onClick={onSubmit}>
-                      Submit
+                      提交
                     </button>
                   )}
                 </div>
