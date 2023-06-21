@@ -12,7 +12,7 @@ import { aesEncrypt, getAesIV, getAesKey } from '../../utils/AES';
 import { StorageKeys } from '../../constants/keys';
 import { useLocalStorageState } from 'ahooks';
 import { useProvider, useSigner } from 'wagmi';
-import { DeVaultFactoryAbi } from '../../abi/DeVaultFactoryAbi';
+import { BluemsunVaultFactoryAbi } from '../../abi/BluemsunVaultFactoryAbi';
 import { useVault } from '../../hooks/useVault';
 import { AAContractAbi } from '../../abi/AAContractAbi';
 import { hash } from '../../utils/hash';
@@ -63,7 +63,7 @@ export default function SetupDialog({
     const factoryContract = new ethers.Contract(
       // '0x8ede80F98290383A39695809B5413A8D28783B40',
       "0x24440fBFa8a6189c0Ac3c2AdB8DAe46b34BBD224",
-      DeVaultFactoryAbi,
+      BluemsunVaultFactoryAbi,
       provider
     );
 
@@ -100,7 +100,7 @@ export default function SetupDialog({
       let factoryContractSigner = factoryContract.connect(signer.data as ethers.Signer);
       console.log("aaaaa"+signer.data)
       // console.log("=============factorContractSigner==============" + factoryContractSigner)
-      let factoryContractTransaction = await factoryContractSigner.createDeVault(userId, pwdHass);
+      let factoryContractTransaction = await factoryContractSigner.createBluemsunVault(userId, pwdHass);
       // console.log("============factoryconstractTransaction=============" + factoryContractTransaction)
       let res = await factoryContractTransaction.wait();
       // console.log(res)

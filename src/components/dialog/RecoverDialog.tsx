@@ -4,7 +4,7 @@ import { BigNumber, ethers } from 'ethers';
 import { Fragment, useEffect, useState } from 'react';
 import { useProvider } from 'wagmi';
 import { AAContractAbi } from '../../abi/AAContractAbi';
-import { DeVaultFactoryAbi } from '../../abi/DeVaultFactoryAbi';
+import { BluemsunVaultFactoryAbi } from '../../abi/BluemsunVaultFactoryAbi';
 import { devaultContract } from '../../constants/contracts';
 import { StorageKeys } from '../../constants/keys';
 import { useVault } from '../../hooks/useVault';
@@ -46,10 +46,10 @@ export default function RecoverDialog({
     if (!email || !masterPassword || !secretKey) return;
     setIsLoading(true);
     const vaultKey = hash('1');
-    const factoryContract = new ethers.Contract(devaultContract, DeVaultFactoryAbi, provider);
+    const factoryContract = new ethers.Contract(devaultContract, BluemsunVaultFactoryAbi, provider);
     const userId = BigNumber.from(getUserId(email, secretKey)).toString();
     try {
-      let devaultAddress = await factoryContract.getDeVault(userId);
+      let devaultAddress = await factoryContract.getBluemsunVault(userId);
 
       if (devaultAddress) {
         const aaContract = new ethers.Contract(devaultAddress, AAContractAbi, provider);
