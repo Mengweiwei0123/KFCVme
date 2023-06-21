@@ -104,7 +104,7 @@ export default function AddRecordDialog({
               leaveTo="opacity-0 scale-95"
             >
               <Dialog.Panel className="w-full transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all max-w-md">
-                <Dialog.Title as="h3" className="text-lg font-medium leading-6 text-gray-100">
+                <Dialog.Title as="h3" className="text-lg font-medium leading-6 text-gray-900">
                   添加记录
                 </Dialog.Title>
 
@@ -118,7 +118,7 @@ export default function AddRecordDialog({
                       value={domain}
                       onChange={(e) => setDomain(e.target.value)}
                       placeholder="域名"
-                      className="input w-full input-sm"
+                      className="input w-full input-sm focus:outline-none focus:ring-2"
                     />
                     <label className="label mt-2">
                       <span className="label-text">用户名</span>
@@ -128,7 +128,7 @@ export default function AddRecordDialog({
                       value={username}
                       onChange={(e) => setUsername(e.target.value)}
                       placeholder="用户名"
-                      className="input w-full input-sm"
+                      className="input w-full input-sm focus:outline-none focus:ring-2"
                     />
                     <label className="label mt-2">
                       <span className="label-text"> 密码</span>
@@ -138,7 +138,7 @@ export default function AddRecordDialog({
                       placeholder="密码"
                       value={password}
                       onChange={(e) => setPassword(e.target.value)}
-                      className="input w-full input-sm"
+                      className="input w-full input-sm focus:outline-none focus:ring-2"
                     />
                   </div>
                 </div>
@@ -149,7 +149,7 @@ export default function AddRecordDialog({
                       交易处理中
                     </button>
                   ) : (
-                    <button type="button" className="btn w-full" onClick={onSubmit}>
+                    <button type="button" className="btn w-full bg-blue-300 hover:bg-blue-400 border-none text-gray-100" onClick={onSubmit}>
                       提交
                     </button>
                   )}

@@ -14,7 +14,7 @@ export default function VaultList() {
   useEffect(() => {
     async function fetch() {
       // const value = await provider.getBalance('0xbde121b7c6df4034765c0a544a31fc4aa6f48dc5');
-      const value = await provider.getBalance('0xE1C757DF8F1430a9Cb31A312a842b34DE7372E85');
+      const value = await provider.getBalance('0x9c8F41C24De79CC09Fb0F9a31F0943baF8789106');
       
       setBalance(Number(BigNumber.from(value).toString()));
     }
