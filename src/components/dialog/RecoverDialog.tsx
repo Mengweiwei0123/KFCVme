@@ -134,7 +134,7 @@ export default function RecoverDialog({
                 ) : (
                   <>
                     <div className="mt-2">
-                      <div className="form-control w-full max-w-xs">
+                      <div className="form-control w-full">
                         <label className="label">
                           <span className="label-text">你的邮箱</span>
                         </label>
@@ -143,7 +143,7 @@ export default function RecoverDialog({
                           value={email}
                           onChange={(e) => setEmail(e.target.value)}
                           placeholder="邮箱"
-                          className="input w-full max-w-xs input-sm"
+                          className="input w-full input-sm"
                         />
                         <label className="label mt-2">
                           <span className="label-text">主密码</span>
@@ -153,7 +153,7 @@ export default function RecoverDialog({
                           placeholder="主密码"
                           value={masterPassword}
                           onChange={(e) => setMasterPassword(e.target.value)}
-                          className="input w-full max-w-xs input-sm"
+                          className="input w-full input-sm"
                         />
                         <label className="label mt-2">
                           <span className="label-text">密钥</span>
@@ -164,7 +164,7 @@ export default function RecoverDialog({
                           placeholder="密钥"
                           value={secretKey}
                           onChange={(e) => setSecretKey(e.target.value)}
-                          className="input w-full max-w-xs input-sm"
+                          className="input w-full input-sm"
                         />
                       </div>
                     </div>
@@ -178,13 +178,16 @@ export default function RecoverDialog({
                           正在加载
                         </button>
                       ) : (
-                        <button
-                          type="button"
-                          className="inline-flex justify-center rounded-md border border-transparent bg-blue-100 px-4 py-2 text-sm font-medium text-blue-900 hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
-                          onClick={() => onsubmit()}
-                        >
+                        <button type="button" className="btn w-full bg-blue-300 hover:bg-blue-400 border-none text-gray-100" onClick={() => onsubmit()}>
                           提交
                         </button>
+                        // <button
+                        //   type="button"
+                        //   className="inline-flex justify-center rounded-md border border-transparent bg-blue-100 px-4 py-2 text-sm font-medium text-blue-900 hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
+                        //   onClick={() => onsubmit()}
+                        // >
+                        //   提交
+                        // </button>
                       )}
                     </div>
                   </>

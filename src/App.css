@@ -8,11 +8,12 @@ body {
 .App {
   text-align: center;
   overflow-y: auto;
-  width: 500px;
-  background: rgb(112, 149, 235);
+  width: 450px;
+  background: rgb(137, 167, 237);
   min-height: 700px;
   margin: 0 auto;
   @apply rounded-xl;
+  margin-top: 20px;
 }
 
 .App-logo {

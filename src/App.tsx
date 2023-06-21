@@ -24,14 +24,14 @@ function App() {
         {isConnected && locked && initialized && <Lock setUnlock={() => setLocked(false)} />}
         {!isConnected && (
           <button
-            className="btn mt-10"
+            className="btn mt-40 text-gray-950 bg-gray-100 border-none text-xl hover:text-gray-100"
             onClick={() => {
               connectAsync({
                 connector: connectors.find((e) => e.id === 'metaMask'),
               });
             }}
           >
-            Connect Wallet
+            连接到Bluemsun钱包
           </button>
         )}
       </header>

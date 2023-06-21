@@ -227,7 +227,7 @@ export default function SetupDialog({
                           加载中
                         </button>
                       ) : (
-                        <button type="button" className="btn w-full " onClick={onSubmit}>
+                        <button type="button" className="btn w-full bg-blue-300 hover:bg-blue-400 border-none text-gray-100" onClick={onSubmit}>
                           提交
                         </button>
                       )}

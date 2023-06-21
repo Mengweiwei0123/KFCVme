@@ -22,7 +22,7 @@ export default function Header({
   return (
     <header className="h-20">
       {isConnected && (
-        <div className="flex w-full py-2 px-4 items-center">
+        <div className="flex w-full py-2 px-4 items-center mt-5">
           <div className="flex items-center grow">
             <img alt="" src={logo} width={64} height={64} />
             <div className="text-white text-left">
@@ -34,8 +34,8 @@ export default function Header({
           </div>
 
           <div className="dropdown dropdown-end">
-            <label tabIndex={0} className="w-10 h-10 text-slate-200 btn p-0 btn-circle btn-sm">
-              <img alt="" src="img/ic-setting.svg" width={16} height={16} className="text-white" />
+            <label tabIndex={0} className="w-10 h-10 text-slate-200 btn p-0 btn-circle btn-sm bg-gray-100 border-none">
+              <img alt="" src="img/icon.svg" width={16} height={16} className="text-white" />
             </label>
 
             <ul

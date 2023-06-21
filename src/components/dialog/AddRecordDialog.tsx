@@ -149,7 +149,7 @@ export default function AddRecordDialog({
                       交易处理中
                     </button>
                   ) : (
-                    <button type="button" className="btn w-full " onClick={onSubmit}>
+                    <button type="button" className="btn w-full" onClick={onSubmit}>
                       提交
                     </button>
                   )}
