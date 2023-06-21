@@ -123,7 +123,7 @@ export default function RecoverDialog({
                     </div>
                     <button
                       type="button"
-                      className="btn w-full mt-16"
+                      className="btn w-full mt-16 bg-blue-300 hover:bg-blue-400 border-none text-gray-100"
                       onClick={() => {
                         setIsOpen(false);
                       }}
@@ -143,7 +143,7 @@ export default function RecoverDialog({
                           value={email}
                           onChange={(e) => setEmail(e.target.value)}
                           placeholder="邮箱"
-                          className="input w-full input-sm"
+                          className="input w-full input-sm focus:outline-none focus:ring-2"
                         />
                         <label className="label mt-2">
                           <span className="label-text">主密码</span>
@@ -153,7 +153,7 @@ export default function RecoverDialog({
                           placeholder="主密码"
                           value={masterPassword}
                           onChange={(e) => setMasterPassword(e.target.value)}
-                          className="input w-full input-sm"
+                          className="input w-full input-sm focus:outline-none focus:ring-2"
                         />
                         <label className="label mt-2">
                           <span className="label-text">密钥</span>
@@ -164,7 +164,7 @@ export default function RecoverDialog({
                           placeholder="密钥"
                           value={secretKey}
                           onChange={(e) => setSecretKey(e.target.value)}
-                          className="input w-full input-sm"
+                          className="input w-full input-sm focus:outline-none focus:ring-2"
                         />
                       </div>
                     </div>

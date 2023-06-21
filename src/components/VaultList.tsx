@@ -27,7 +27,7 @@ export default function VaultList() {
         {balance.toFixed(2)} ETH
       </div>
       <div className="mx-4">
-        <button className="btn btn-block" onClick={() => setIsOpen(true)}>
+        <button className="btn btn-block text-gray-100" onClick={() => setIsOpen(true)}>
           添加记录
         </button>
       </div>

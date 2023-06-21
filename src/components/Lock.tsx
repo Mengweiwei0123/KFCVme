@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useSetRecoilState } from 'recoil';
 import { StorageKeys } from '../constants/keys';
 import { useVault } from '../hooks/useVault';
-import logo from '../logo.svg';
+import logo from '../logos.png';
 import { masterPasswordState } from '../store/store';
 import { aesDecrypt, getAesIV, getAesKey } from '../utils/AES';
 import Vault from '../utils/vault';
@@ -48,19 +48,19 @@ export default function Lock({ setUnlock }: { setUnlock: () => void }) {
 
   return (
     <div className="w-full h-full flex flex-col items-center">
-      <img src={logo} className="App-logo" alt="logo" />
+      <img src={logo} className="App-logo mt-10" alt="logo" />
 
       <div className="flex gap-2">
         <input
           type="password"
           value={pass}
           placeholder="主密码"
-          className="input text-gray-900"
+          className="input text-gray-900 focus:outline-none focus:ring-2"
           onChange={(e) => setPass(e.target.value)}
         ></input>
 
-        <button className="btn" onClick={validate}>
-          解锁
+        <button className="btn text-gray-100" onClick={validate}>
+          解 锁
         </button>
       </div>
     </div>

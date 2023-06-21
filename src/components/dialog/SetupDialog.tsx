@@ -176,7 +176,7 @@ export default function SetupDialog({
                     <div className="text-xl mt-10">你的密钥为 {showSecretKey}</div>
                     <button
                       type="button"
-                      className="btn w-full mt-16"
+                      className="btn w-full mt-16 bg-blue-300 hover:bg-blue-400 border-none text-gray-100"
                       onClick={() => {
                         setIsOpen(false);
                       }}
@@ -196,7 +196,7 @@ export default function SetupDialog({
                           value={email}
                           onChange={(e) => setEmail(e.target.value)}
                           placeholder="邮箱"
-                          className="input w-full input-sm"
+                          className="input w-full input-sm focus:outline-none focus:ring-2"
                         />
                         <label className="label mt-2">
                           <span className="label-text">主密码</span>
@@ -206,7 +206,7 @@ export default function SetupDialog({
                           placeholder="主密码"
                           value={masterPassword}
                           onChange={(e) => setMasterPassword(e.target.value)}
-                          className="input w-full input-sm"
+                          className="input w-full input-sm focus:outline-none focus:ring-2"
                         />
                         <label className="label mt-2">
                           <span className="label-text">再次输入密码</span>
@@ -216,7 +216,7 @@ export default function SetupDialog({
                           placeholder="密码"
                           value={reenter}
                           onChange={(e) => setReenter(e.target.value)}
-                          className="input w-full input-sm"
+                          className="input w-full input-sm focus:outline-none focus:ring-2"
                         />
                       </div>
                     </div>
